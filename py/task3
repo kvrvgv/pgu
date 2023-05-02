@@ -1,0 +1,14 @@
+﻿text = input("Введите текст: ")
+words_list = text.split()
+word_count = {}
+
+for word in words_list:
+    print(word)
+    if word not in word_count:
+        word_count.update({word: 0})
+    word_count[word] += 1
+    
+most_repeated = max(word_count, key=lambda x: word_count.get(x))
+longest_word = max(words_list, key=lambda x: len(x))
+print("Наиболее встречающееся слово:", most_repeated)
+print("Самое длинное слово:", longest_word)
