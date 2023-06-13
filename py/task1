@@ -1,11 +1,15 @@
-﻿number = float(input("Введите произвольное число: "))
+﻿
+
+number = float(input("Введите произвольное число: "))
 border = float(input("Введите границу: "))
+
 if number > border:
-    if number < boundary:
+    if number < border:
         print("Введенное число меньше границы")
-    elif number > boundary:
+    elif number > border:
         print("Введенное число больше границы")
-    if number > boundary * 3:
+
+    if number > border * 3:
         print("Введенное число больше границы более чем в 3 раза")
     else:
         print("Введенное число равно границе")
