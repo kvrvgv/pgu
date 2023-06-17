@@ -8,8 +8,7 @@ const initState = {
 
 export const userReducer = (state = initState, action) => {
     if (action.type === "add") {
-        return {
-            ...state,
+        return {...state,
             user: {
                 id: action.id,
                 name: action.name,

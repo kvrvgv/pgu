@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-const User = () => {
+const Cabinet = () => {
 
   const navigate = useNavigate()
   const dispath = useDispatch()
@@ -29,15 +29,17 @@ const User = () => {
 
   return (
     <>
-      <div className="main_layout">
+      <div className="main_block">
         {user && <div className="user_info">
-          <span className="user_text">Your Name: <b>{user.name}</b></span>
-          <span className="user_text">Unique ID: <b>{user.id}</b></span>
-          <button className="button_login" onClick={logOut}>Exit</button>
+          <div style={{display: "flex", justifyContent: "space-between", width: "180px"}}>
+            <span className="user_text">ID: <b>{user.id}</b></span>
+            <span className="user_text">Имя: <b>{user.name}</b></span>            
+          </div>
+          <button className="button" onClick={logOut}>Выйти</button>
         </div>}
       </div>
     </>
   );
 }
 
-export default User;
+export default Cabinet;
